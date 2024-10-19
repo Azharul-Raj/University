@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE BEAUTIFUL CITY RANGPUR</title>
+    <style>
+      .mainContainer {
+        width: 100%;
+      }
+      .header {
+        display: grid;
+      }
+      .logo {
+        display: flex;
+        justify-content: start;
+        grid-column: 1;
+      }
+      .headerMenu {
+        /* width: 100%; */
+        grid-column: 8;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 20px;
+      }
+      .m {
+        padding: 0px 5px 0px 5px;
+      }
+      /* button design part */
+      .btn {
+        color: purple;
+        font-family: monospace;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid purple;
+        padding: 10px 20px;
+        font-size: 17px;
+        cursor: pointer;
+        font-weight: bold;
+        background: transparent;
+        position: relative;
+        transition: all 1s;
+        overflow: hidden;
+      }
+
+      .btn:hover {
+        color: white;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        left: -40px;
+        transform: skewX(45deg);
+        background-color: purple;
+        z-index: -1;
+        transition: all 1s;
+      }
+
+      .btn:hover::before {
+        width: 160%;
+      }
+      a {
+        text-decoration: none;
+        margin: 0px 4px 0px 4px;
+      }
+      /* btn end */
+      /* top section style */
+      .top {
+        height: 100px;
+        margin-top: -10px;
+      }
+      /* top section style */
+      /* hero section style  */
+      .hero {
+    background-color: #007bff;
+    color: white;
+padding:20px;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.call-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    width: 400px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+      /* hero section style  */
+      /* food section design */
+      .menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+}
+.heading{
+    background-color: black;
+    color: orange;
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: orange;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+
+footer
+{
+    position: fixed;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+		font-size:11px;
+		font-weight:bold;
+		text-align:center;
+		background-color:lightgray;
+		color:black;
+		font-family:Arial;
+		letter-spacing:1px;
+  
+	}
+button{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart{
+    background: #fdbb2d;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 2px solid black;
+}
+.cart i{
+    position: absolute;
+    margin-left: 90px;
+    column-fill: transparent;
+    transition: 400ms;
+    color: transparent;
+}
+.cart span{
+    transition: 400ms;
+}
+.cart:hover span{
+    margin-right: 30px;
+}
+.cart:hover i{
+    margin-left: 45px;
+    column-fill: white;
+    color: black;
+}
+button:focus{
+    outline: none;
+}
+     /* food section end */
+      /* menu part */
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <!-- top header section start-->
+      <div class="header">
+        <div class="logo">
+          <img height="" width="100" src="/images/logo.png" alt="logo" />
+        </div>
+        <!-- menu section start -->
+        <div class="headerMenu">
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Rangpur,_Bangladesh"
+          >
+            <button class="btn">Home</button>
+          </a>
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Rangpur,_Bangladesh"
+          >
+            <button class="btn">About</button>
+          </a>
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Rangpur,_Bangladesh"
+          >
+            <button class="btn">Contact</button>
+          </a>
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Rangpur,_Bangladesh"
+          >
+            <button class="btn">Wiki</button>
+          </a>
+        </div>
+        <!-- menu section end -->
+      </div>
+      <!-- hero section start -->
+      <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Want to Explore The Beautiful City Rangpur With Travel Guid? </h1>
+                <a href="tel:01773501139" class="call-now">Call Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="/images/travel.jpg" alt="Laptop with Marketing Services">
+            </div>
+        </div>
+    </section>
+        <!-- Food area sections start-->
+        <div class="menu">
+          <div class="heading">
+              <h1>HYORI'S CHIKIN</h1>
+              <h3>&mdash; MENU &mdash; </h3>
+          </div>
+          <div class="food-items">
+              <img src="https://kitchencookbook.net/wp-content/uploads/2019/03/Kchicken-e1552557923932.jpg">
+              <div class="details">
+                  <div class="details-sub">
+                      <h5>Spicy Fried Chicken</h5>
+                      <h5 class="price"> RM15 </h5>
+                  </div>
+                  <p>Korean fried chicken takes on the quintessential American fast food with its own unique flair. </p>
+                  <button class="cart">
+          <a href="https://codepen.io/zieyrah-abdullah/full/WNpJVoM#">Add to Cart</a>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      </button>
+              </div>
+          </div>
+  
+          <div class="food-items">
+              <img src="https://a.cdn-hotels.com/gdcs/production147/d1051/8bc6d80d-36d3-4a76-a495-1447aeb26c84.jpg">
+              <div class="details">
+                  <div class="details-sub">
+                      <h5>Ginseng Chicken Soup</h5>
+                      <h5 class="price"> RM18 </h5>
+                  </div>
+                  <p>This nourishing soup consists of a small spring chicken stuffed with chestnuts, garlic, dried jujubes, ginseng, glutinous rice, and gingko nuts.</p>
+                  <button class="cart">
+          <a href="https://codepen.io/zieyrah-abdullah/full/WNpJVoM#">Add to Cart</a>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      </button>
+              </div>
+          </div>
+  
+          <div class="food-items">
+              <img src="http://2.bp.blogspot.com/_tJBtn57VtWI/S60bw10rTxI/AAAAAAAACcQ/39RhzxxYUC0/s1600/DSC03408.jpg">
+              <div class="details">
+                  <div class="details-sub">
+                      <h5>Jajangmyeon</h5>
+                      <h5 class="price"> RM8 </h5>
+                  </div>
+                  <p>Jajangmyeon uses thick handmade wheat noodles topped with raw cucumber slices and a mixture of salty black soybean paste, diced pork and vegetables.</p>
+                  <button class="cart">
+          <a href="https://codepen.io/zieyrah-abdullah/full/WNpJVoM#">Add to Cart</a>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      </button>
+              </div>
+          </div>
+  
+          <div class="food-items">
+              <img src="https://a.cdn-hotels.com/gdcs/production12/d29/cc49915a-a856-4e94-9ba4-c7e89a652d2e.jpg">
+              <div class="details">
+                  <div class="details-sub">
+                      <h5>Bibimbap</h5>
+                      <h5 class="price"> RM7.50 </h5>
+                  </div>
+                  <p>Another must-try is bibimbap, a filling and nutritious dish that’s widely available in restaurants.</p>
+                  <button class="cart">
+          <a href="https://codepen.io/zieyrah-abdullah/full/WNpJVoM#">Add to Cart</a>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      </button>
+              </div>
+          </div>
+  
+          <div class="food-items">
+              <img src="https://a.cdn-hotels.com/gdcs/production65/d1648/71fa270d-179e-47b5-be14-684ff9b90659.jpg">
+              <div class="details">
+                  <div class="details-sub">
+                      <h5>Red Rice cake(Tteokbokki)</h5>
+                      <h5 class="price"> RM6 </h5>
+                  </div>
+                  <p>Tteokbokki is a traditional Korean street food that’s made with thick slices of garaetteok (boiled rice cake), fish cake, onions, diced garlic, salt, sugar and assorted vegetables that are stir-fried in sweet red chili sauce.</p>
+                  <button class="cart">
+          <a href="https://codepen.io/zieyrah-abdullah/full/WNpJVoM#">Add to Cart</a>
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      </button>
+              </div>
+          </div>
+      </div>
+        <!-- Food area sections end -->
+      </div>
+      <!-- hero section end -->
+      <!-- top header section end -->
+      <h1>This is The beautiful city of Rangpur.</h1>
+    </div>
+  </body>
+</html>
